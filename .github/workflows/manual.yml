@@ -18,3 +18,7 @@ jobs:
     # Runs a single command using the runners shell
     - run: |
         echo ${{ github.ref }} > test.txt
+    - uses: actions/upload-artifact@v4
+      with:
+        name: the_file
+        path: .
