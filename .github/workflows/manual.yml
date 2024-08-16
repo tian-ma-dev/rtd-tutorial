@@ -18,9 +18,9 @@ jobs:
     # Runs a single command using the runners shell
     - run: |
         touch test.txt
-        echo "Here is some introductory text \n\n" >> test.txt
-        echo ${{ github.ref }} >> test.txt
-        echo ${{ github.sha }} >> test.txt
+        printf "Here is some introductory text \n\n" >> test.txt
+        printf ${{ github.ref }} >> test.txt
+        printf ${{ github.sha }} >> test.txt
     - uses: actions/upload-artifact@v4
       with:
         name: the_file
